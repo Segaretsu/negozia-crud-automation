@@ -1,7 +1,7 @@
 #language: es
 @CreacionDeUsuarios
 Característica: Creación de usuarios
-  I want to use this template for my feature file
+  Prueba automatizada de creación de usuario básico
 
   @Correcto
   Escenario: Creación de usuarios en un mundo ideal, donde el usuario ingresa todo bien.

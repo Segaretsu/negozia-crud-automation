@@ -1,6 +1,5 @@
 import com.kms.katalon.core.main.TestCaseMain
 import com.kms.katalon.core.logging.KeywordLogger
-import groovy.lang.MissingPropertyException
 import com.kms.katalon.core.testcase.TestCaseBinding
 import com.kms.katalon.core.driver.internal.DriverCleanerCollector
 import com.kms.katalon.core.model.FailureHandling
@@ -15,7 +14,9 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
 
 
-RunConfiguration.setExecutionSettingFile('C:\\Users\\SEBAST~1\\AppData\\Local\\Temp\\Katalon\\Include\\features\\frontend\\usuarios\\CreacionUsuario.feature\\20200615_133517\\execution.properties')
+RunConfiguration.setExecutionSettingFile('C:\\Users\\SEBAST~1\\AppData\\Local\\Temp\\Katalon\\Test Cases\\CrearUsuario\\20200615_155403\\execution.properties')
 
 TestCaseMain.beforeStart()
-TestCaseMain.runFeatureFile('Include/features/frontend/usuarios/CreacionUsuario.feature')
+
+        TestCaseMain.runTestCase('Test Cases/CrearUsuario', new TestCaseBinding('Test Cases/CrearUsuario',[:]), FailureHandling.STOP_ON_FAILURE , false)
+    

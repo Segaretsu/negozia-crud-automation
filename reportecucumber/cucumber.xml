@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="13.984305">
+<testcase classname="Creación de usuarios" name="Creación de usuarios en un mundo ideal, donde el usuario ingresa todo bien." time="13.984305">
+<system-out><![CDATA[Dado que diligencio el formulario con mi información personal...............passed
+Cuando termino de diligenciar mi información doy clic en el botón guardar...passed
+Entonces verifico que mi usuario se haya guardado exitosamente..............passed
+]]></system-out>
+</testcase>
+</testsuite>

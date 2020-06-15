@@ -1,22 +1,97 @@
 package utils
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import java.text.DateFormat
+import java.text.ParseException
+import java.text.SimpleDateFormat
 
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
-import internal.GlobalVariable
-
 public class Dates {
+	//
+
+	@Keyword
+	public static String getFechaActual(int dia) {
+		Date ahora = new Date()+dia;
+		SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+		return formateador.format(ahora);
+	}
+
+	@Keyword
+	public static String getTimeStamp() {
+		Date ahora = new Date();
+		SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+		return formateador.format(ahora);
+	}
+
+	@Keyword
+	public static String getTimeStampSpanish() {
+		Date ahora = new Date();
+		Locale spanishLocale=new Locale("es", "ES");
+		SimpleDateFormat formateador = new SimpleDateFormat("EEEE d 'de' MMMM 'de' yyyy HH:mm:ss",spanishLocale );
+		//String dateInSpanish=ahora.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM, yyyy",spanishLocale));
+		return formateador.format(ahora)
+	}
+
+	@Keyword
+	public static String convertirHora(String arg) {
+		// (ArrayList<String> args)
+		//Input date in String format
+		def hora = arg
+		String input = this.getFechaActual(0)+' '+ hora + ':00'//"15/02/2014 22:22:12";
+		//Date/time pattern of input date
+		DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+		//Date/time pattern of desired output date
+		DateFormat outputformat = new SimpleDateFormat("hh:mm aa");//("yyyy-MM-dd hh:mm:ss aa");
+		Date date = null;
+		String output = null;
+		//String razonSocial= args(0);
+		try{
+			//Conversion of input String to date
+			date= df.parse(input);
+			//old date format to new date format
+			output = outputformat.format(date).toLowerCase();
+			//System.out.println(output);
+			WebUI.comment(output)
+			//def  List a
+			//a.add(razonSocial)
+			//a.add(output)
+			return output
+		}catch(ParseException pe){
+			pe.printStackTrace();
+		}
+	}
+
+	@Keyword
+	public static String fechaRandom(){
+
+		String fecha, dia, mes;
+		int diaRandom = Math.random()*31 + 1
+		int mesRandom = Math.random()*12 + 1
+		int año = Math.random()*(2020 - 1990 +1)+1990
+
+		dia = diaRandom
+		mes = mesRandom
+
+		if(diaRandom < 10){
+
+			dia = "0" + dia
+		}
+
+		if(mesRandom < 10){
+
+			mes = "0" + mes
+
+		}
+
+		fecha = dia + "/" + mes + "/" + año
+		return fecha;
+	}
+	@Keyword
+	public static String fechaPatios() {
+		Date ahora = new Date();
+		SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+		return formateador.format(ahora);
+	}
+
 }
