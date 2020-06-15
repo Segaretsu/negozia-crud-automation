@@ -1,0 +1,1 @@
+# negozia-crud-automation
