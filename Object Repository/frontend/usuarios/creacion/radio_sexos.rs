@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>radio_sexos</name>
+   <tag></tag>
+   <elementGuidId>60d5e15e-5b6d-4f38-b7c1-b03fb52fcfc4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;sexo&quot;][@value=&quot;${sex}&quot;]/ancestor::label</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[@id=&quot;sexo&quot;][@value=&quot;${sex}&quot;]/ancestor::label</value>
+   </webElementProperties>
+</WebElementEntity>
