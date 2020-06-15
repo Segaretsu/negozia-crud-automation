@@ -49,7 +49,7 @@ import cucumber.api.java.es.Entonces
 
 
 class CrearUsuario {
-	
+
 	public static abrirNavegador(String url) {
 		WebUI.openBrowser(url);
 		WebUI.maximizeWindow();
@@ -79,6 +79,5 @@ class CrearUsuario {
 
 	@Entonces("verifico que mi usuario se haya guardado exitosamente")
 	def verifico_que_mi_usuario_se_haya_guardado_exitosamente() {
-		
 	}
 }
