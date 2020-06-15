@@ -1,7 +1,7 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Include/features/frontend/usuarios/CreacionUsuario.feature");
 formatter.feature({
   "name": "Creación de usuarios",
-  "description": "  I want to use this template for my feature file",
+  "description": "  Prueba automatizada de creación de usuario básico",
   "keyword": "Característica",
   "tags": [
     {
