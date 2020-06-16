@@ -18,5 +18,4 @@ strict=true
 )
 
 class RunnerCreacionUsuario {
-	
 }

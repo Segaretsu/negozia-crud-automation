@@ -38,20 +38,6 @@ def static "utils.Direcciones.getDireccionPDF"() {
     (new utils.Direcciones()).getDireccionPDF()
 }
 
-def static "utils.Reportes.generarReporte"(
-    	String jsonDir	
-     , 	String repPath	
-     , 	String timeIni	
-     , 	String timeFin	
-     , 	Object titulo	) {
-    (new utils.Reportes()).generarReporte(
-        	jsonDir
-         , 	repPath
-         , 	timeIni
-         , 	timeFin
-         , 	titulo)
-}
-
 def static "utils.EjecutarPrueba.ejecutar"(
     	Class runner	) {
     (new utils.EjecutarPrueba()).ejecutar(
@@ -78,6 +64,20 @@ def static "utils.EjecutarPrueba.ejecutarConReporteKatalon"(
     	Class runner	) {
     (new utils.EjecutarPrueba()).ejecutarConReporteKatalon(
         	runner)
+}
+
+def static "utils.Reportes.generarReporte"(
+    	String jsonDir	
+     , 	String repPath	
+     , 	String timeIni	
+     , 	String timeFin	
+     , 	Object titulo	) {
+    (new utils.Reportes()).generarReporte(
+        	jsonDir
+         , 	repPath
+         , 	timeIni
+         , 	timeFin
+         , 	titulo)
 }
 
 def static "utils.Dates.getFechaActual"(

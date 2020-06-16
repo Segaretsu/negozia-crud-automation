@@ -7,10 +7,8 @@ class UsuarioEntity {
 	private int telefono;
 	private String tipoTelefono;
 	private String correo;
-	
-	public UsuarioEntity() {
-		
-	}
+
+	public UsuarioEntity() { }
 
 	public String getNombres() {
 		return nombres;
@@ -59,5 +57,4 @@ class UsuarioEntity {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-	
 }
